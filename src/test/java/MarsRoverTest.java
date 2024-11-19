@@ -25,7 +25,7 @@ class MarsRoverTest {
 
     @Test
     void should_face_south_when_turned_right_from_east() {
-        MarsRover rover = new MarsRover(0,0,"E");
+        MarsRover rover = new MarsRover(0,0,Direction.E);
 
         rover.executeCommand("R");
 
@@ -36,7 +36,7 @@ class MarsRoverTest {
 
     @Test
     void should_face_west_when_turned_right_from_south() {
-        MarsRover rover = new MarsRover(0,0,"S");
+        MarsRover rover = new MarsRover(0,0,Direction.S);
 
         rover.executeCommand("R");
 
@@ -47,7 +47,7 @@ class MarsRoverTest {
 
     @Test
     void should_face_north_when_turned_right_from_west() {
-        MarsRover rover = new MarsRover(0,0,"W");
+        MarsRover rover = new MarsRover(0,0,Direction.W);
 
         rover.executeCommand("R");
 
@@ -69,7 +69,7 @@ class MarsRoverTest {
 
     @Test
     void should_face_north_when_turned_left_from_east() {
-        MarsRover rover = new MarsRover(0,0,"E");
+        MarsRover rover = new MarsRover(0,0,Direction.E);
 
         rover.executeCommand("L");
 
@@ -80,7 +80,7 @@ class MarsRoverTest {
 
     @Test
     void should_face_east_when_turned_left_from_south() {
-        MarsRover rover = new MarsRover(0,0,"S");
+        MarsRover rover = new MarsRover(0,0,Direction.S);
 
         rover.executeCommand("L");
 
@@ -91,7 +91,7 @@ class MarsRoverTest {
 
     @Test
     void should_face_south_when_turned_left_from_west() {
-        MarsRover rover = new MarsRover(0,0,"W");
+        MarsRover rover = new MarsRover(0,0,Direction.W);
 
         rover.executeCommand("L");
 
@@ -113,9 +113,8 @@ class MarsRoverTest {
 
     @Test
     void should_move_forward_when_facing_east() {
-        MarsRover rover = new MarsRover();
+        MarsRover rover = new MarsRover(0,0,Direction.E);
 
-        rover.executeCommand("R");
         rover.executeCommand("M");
 
         String Status = rover.getStatus();
@@ -125,10 +124,8 @@ class MarsRoverTest {
 
     @Test
     void should_move_forward_when_facing_south() {
-        MarsRover rover = new MarsRover();
+        MarsRover rover = new MarsRover(0,0,Direction.S);
 
-        rover.executeCommand("R");
-        rover.executeCommand("R");
         rover.executeCommand("M");
 
         String Status = rover.getStatus();
@@ -138,9 +135,8 @@ class MarsRoverTest {
 
     @Test
     void should_move_forward_when_facing_west() {
-        MarsRover rover = new MarsRover();
+        MarsRover rover = new MarsRover(0,0,Direction.W);
 
-        rover.executeCommand("L");
         rover.executeCommand("M");
 
         String Status = rover.getStatus();

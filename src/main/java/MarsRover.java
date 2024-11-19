@@ -1,19 +1,19 @@
 
 public class MarsRover {
-    public static final String[] DIRECTION_LOOP = {"N", "E", "S", "W"};
+    private static final Direction[] DIRECTION_LOOP = {Direction.N, Direction.E, Direction.S, Direction.W};
 
     public int x;
     public int y;
-    public String direction;
+    public Direction direction;
 
-    public MarsRover(int x, int y, String direction) {
+    public MarsRover(int x, int y, Direction direction) {
         this.x = x;
         this.y = y;
         this.direction = direction;
     }
 
     public MarsRover() {
-        this(0, 0, "N");
+        this(0, 0, Direction.N);
     }
 
     public String getStatus() {
