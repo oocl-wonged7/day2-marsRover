@@ -1,5 +1,7 @@
 
 public class MarsRover {
+    public static final String[] DirectionLoop= {"N", "E", "S", "W"};
+
     public int x;
     public int y;
     public String direction;
@@ -21,14 +23,12 @@ public class MarsRover {
     public void executeCommand(String command) {
     }
 
-    private void moveForward() {
+    public void moveForward() {
     }
 
-    private void turnRight() {
+    public void turnRight() {
     }
 
-
-    private void turnLeft() {
-        
+    public void turnLeft() {
     }
 }
