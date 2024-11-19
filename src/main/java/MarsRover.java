@@ -30,7 +30,7 @@ public class MarsRover {
         }
     }
 
-    public int getCurrentDirect(){
+    public int getCurrentDirectIndex(){
         return java.util.Arrays.asList(DirectionLoop).indexOf(direction);
     }
 
@@ -47,10 +47,10 @@ public class MarsRover {
     }
 
     public void turnRight() {
-        this.direction = DirectionLoop[(getCurrentDirect() + 1) % 4];
+        this.direction = DirectionLoop[(getCurrentDirectIndex() + 1) % 4];
     }
 
     public void turnLeft() {
-        this.direction = DirectionLoop[((getCurrentDirect() - 1) + 4) % 4];
+        this.direction = DirectionLoop[((getCurrentDirectIndex() - 1) + 4) % 4];
     }
 }
