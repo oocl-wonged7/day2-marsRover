@@ -5,14 +5,7 @@ public class MarsRover {
     public String direction;
 
 
-    public MarsRover(int x, int y, String direction) {
-        this.x = x;
-        this.y = y;
-        this.direction = direction;
-    }
-
     public MarsRover() {
-        this(0,0,"N");
     }
 
     public String getStatus() {
