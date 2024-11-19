@@ -33,4 +33,15 @@ class MarsRoverTest {
 
         assertEquals("0:0:W", Status);
     }
+
+    @Test
+    void should_move_forward_when_facing_north() {
+        MarsRover rover = new MarsRover();
+
+        rover.executeCommand("M");
+
+        String Status = rover.getStatus();
+
+        assertEquals("0:1:N", Status);
+    }
 }

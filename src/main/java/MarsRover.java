@@ -35,6 +35,7 @@ public class MarsRover {
     }
 
     public void moveForward() {
+
     }
 
     public void turnRight() {
