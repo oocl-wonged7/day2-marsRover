@@ -21,18 +21,21 @@ public class MarsRover {
     }
 
     public void executeCommand(String command) {
-        if (command.equals("M")){
-            move(true);
-        }else if (command.equals("B")){
-            move(false);
-        }else if (command.equals("R")) {
-            turnRight();
-        } else if (command.equals("L")) {
-            turnLeft();
+        command.chars()
+                .mapToObj(c -> String.valueOf((char) c))
+                .forEach(this::executeSingleCommand);
+    }
+
+    public void executeSingleCommand(String command) {
+        switch (command) {
+            case "M" -> move(true);
+            case "B" -> move(false);
+            case "L" -> turnLeft();
+            case "R" -> turnRight();
         }
     }
 
-    public int getCurrentDirectIndex(){
+    public int getCurrentDirectIndex() {
         return java.util.Arrays.asList(DIRECTION_LOOP).indexOf(direction);
     }
 
