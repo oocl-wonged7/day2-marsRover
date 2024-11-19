@@ -22,8 +22,10 @@ public class MarsRover {
 
     public void executeCommand(String command) {
         if (command.equals("M")){
-            moveForward();
-        } else if (command.equals("R")) {
+            move(true);
+        }else if (command.equals("B")){
+            move(false);
+        }else if (command.equals("R")) {
             turnRight();
         } else if (command.equals("L")) {
             turnLeft();
@@ -34,15 +36,13 @@ public class MarsRover {
         return java.util.Arrays.asList(DIRECTION_LOOP).indexOf(direction);
     }
 
-    public void moveForward() {
-        if (direction.equals("N")) {
-            y++;
-        } else if (direction.equals("E")) {
-            x++;
-        } else if (direction.equals("S")) {
-            y--;
-        } else if (direction.equals("W")) {
-            x--;
+    public void move(Boolean isForward) {
+        int step = isForward ? 1 : -1;
+        switch (direction) {
+            case N -> y += step;
+            case E -> x += step;
+            case S -> y -= step;
+            case W -> x -= step;
         }
     }
 
