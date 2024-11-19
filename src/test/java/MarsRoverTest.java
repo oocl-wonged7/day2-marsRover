@@ -2,9 +2,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class MarsRoverTest {
+class MarsRoverTest {
     @Test
-    public void should_initialize_mars_rover() {
+    void should_initialize_mars_rover() {
         MarsRover rover = new MarsRover();
 
         String Status = rover.getStatus();
