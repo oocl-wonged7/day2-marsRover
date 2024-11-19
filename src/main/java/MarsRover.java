@@ -1,6 +1,6 @@
 
 public class MarsRover {
-    private static final Direction[] DIRECTION_LOOP = {Direction.N, Direction.E, Direction.S, Direction.W};
+    private static final Direction[] DIRECTION_LOOP = Direction.values();
 
     public int x;
     public int y;
@@ -35,10 +35,6 @@ public class MarsRover {
         }
     }
 
-    public int getCurrentDirectIndex() {
-        return java.util.Arrays.asList(DIRECTION_LOOP).indexOf(direction);
-    }
-
     public void move(Boolean isForward) {
         int step = isForward ? 1 : -1;
         switch (direction) {
@@ -50,11 +46,11 @@ public class MarsRover {
     }
 
     public void turnRight() {
-        this.direction = DIRECTION_LOOP[(getCurrentDirectIndex() + 1) % 4];
+        this.direction = DIRECTION_LOOP[(direction.ordinal() + 1) % 4];
     }
 
     public void turnLeft() {
         // Add DIRECTION_LOOP.length to avoid negative index
-        this.direction = DIRECTION_LOOP[((getCurrentDirectIndex() - 1) + DIRECTION_LOOP.length) % 4];
+        this.direction = DIRECTION_LOOP[((direction.ordinal() - 1) + DIRECTION_LOOP.length) % 4];
     }
 }
