@@ -12,6 +12,7 @@ class MarsRoverTest {
         assertEquals("0:0:N", Status);
     }
 
+    @Test
     void should_face_east_when_turned_right_from_north() {
         MarsRover rover = new MarsRover();
 
