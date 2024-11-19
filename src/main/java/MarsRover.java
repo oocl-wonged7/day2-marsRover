@@ -42,5 +42,6 @@ public class MarsRover {
     }
 
     public void turnLeft() {
+        this.direction = DirectionLoop[((getCurrentDirect() - 1) + 4) % 4];
     }
 }
