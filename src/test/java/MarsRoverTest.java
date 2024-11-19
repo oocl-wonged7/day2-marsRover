@@ -187,4 +187,15 @@ class MarsRoverTest {
 
         assertEquals("1:0:W", Status);
     }
+
+    @Test
+    void should_move_correctly_with_batch_commands() {
+        MarsRover rover = new MarsRover();
+
+        rover.executeCommand("MRBLM");
+
+        String Status = rover.getStatus();
+
+        assertEquals("-1:2:N", Status);
+    }
 }
