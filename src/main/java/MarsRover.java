@@ -53,11 +53,11 @@ public class MarsRover {
     }
 
     public void turnRight() {
-        this.direction = DIRECTION_LOOP[(direction.ordinal() + 1) % 4];
+        this.direction = DIRECTION_LOOP[(direction.ordinal() + 1) % DIRECTION_LOOP.length];
     }
 
     public void turnLeft() {
         // Add DIRECTION_LOOP.length to avoid negative index
-        this.direction = DIRECTION_LOOP[((direction.ordinal() - 1) + DIRECTION_LOOP.length) % 4];
+        this.direction = DIRECTION_LOOP[((direction.ordinal() - 1) + DIRECTION_LOOP.length) % DIRECTION_LOOP.length];
     }
 }
