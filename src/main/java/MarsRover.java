@@ -1,10 +1,19 @@
+import java.util.Arrays;
 
 public class MarsRover {
     private static final Direction[] DIRECTION_LOOP = Direction.values();
+    private static final Boolean FORWARD = true;
+    private static final Boolean BACKWARD = false;
+    private static final String MOVE_FORWARD = "M";
+    private static final String MOVE_BACKWARD = "B";
+    private static final String TURN_LEFT = "L";
+    private static final String TURN_RIGHT = "R";
+    private static final int FORWARD_STEP = 1;
+    private static final int BACKWARD_STEP = -1;
 
-    public int x;
-    public int y;
-    public Direction direction;
+    private int x;
+    private int y;
+    private Direction direction;
 
     public MarsRover(int x, int y, Direction direction) {
         this.x = x;
@@ -21,22 +30,20 @@ public class MarsRover {
     }
 
     public void executeCommand(String command) {
-        command.chars()
-                .mapToObj(c -> String.valueOf((char) c))
-                .forEach(this::executeSingleCommand);
+        Arrays.stream(command.split("")).forEach(this::executeSingleCommand);
     }
 
     public void executeSingleCommand(String command) {
         switch (command) {
-            case "M" -> move(true);
-            case "B" -> move(false);
-            case "L" -> turnLeft();
-            case "R" -> turnRight();
+            case MOVE_FORWARD -> move(FORWARD);
+            case MOVE_BACKWARD -> move(BACKWARD);
+            case TURN_LEFT -> turnLeft();
+            case TURN_RIGHT -> turnRight();
         }
     }
 
     public void move(Boolean isForward) {
-        int step = isForward ? 1 : -1;
+        int step = isForward ? FORWARD_STEP : BACKWARD_STEP;
         switch (direction) {
             case N -> y += step;
             case E -> x += step;

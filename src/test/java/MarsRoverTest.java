@@ -7,9 +7,9 @@ class MarsRoverTest {
     void should_initialize_mars_rover() {
         MarsRover rover = new MarsRover();
 
-        String Status = rover.getStatus();
+        String status = rover.getStatus();
 
-        assertEquals("0:0:N", Status);
+        assertEquals("0:0:N", status);
     }
 
     @Test
@@ -18,9 +18,9 @@ class MarsRoverTest {
 
         rover.executeCommand("R");
 
-        String Status = rover.getStatus();
+        String status = rover.getStatus();
 
-        assertEquals("0:0:E", Status);
+        assertEquals("0:0:E", status);
     }
 
     @Test
@@ -29,9 +29,9 @@ class MarsRoverTest {
 
         rover.executeCommand("R");
 
-        String Status = rover.getStatus();
+        String status = rover.getStatus();
 
-        assertEquals("0:0:S", Status);
+        assertEquals("0:0:S", status);
     }
 
     @Test
@@ -40,9 +40,9 @@ class MarsRoverTest {
 
         rover.executeCommand("R");
 
-        String Status = rover.getStatus();
+        String status = rover.getStatus();
 
-        assertEquals("0:0:W", Status);
+        assertEquals("0:0:W", status);
     }
 
     @Test
@@ -51,9 +51,9 @@ class MarsRoverTest {
 
         rover.executeCommand("R");
 
-        String Status = rover.getStatus();
+        String status = rover.getStatus();
 
-        assertEquals("0:0:N", Status);
+        assertEquals("0:0:N", status);
     }
 
     @Test
@@ -62,9 +62,9 @@ class MarsRoverTest {
 
         rover.executeCommand("L");
 
-        String Status = rover.getStatus();
+        String status = rover.getStatus();
 
-        assertEquals("0:0:W", Status);
+        assertEquals("0:0:W", status);
     }
 
     @Test
@@ -73,9 +73,9 @@ class MarsRoverTest {
 
         rover.executeCommand("L");
 
-        String Status = rover.getStatus();
+        String status = rover.getStatus();
 
-        assertEquals("0:0:N", Status);
+        assertEquals("0:0:N", status);
     }
 
     @Test
@@ -84,9 +84,9 @@ class MarsRoverTest {
 
         rover.executeCommand("L");
 
-        String Status = rover.getStatus();
+        String status = rover.getStatus();
 
-        assertEquals("0:0:E", Status);
+        assertEquals("0:0:E", status);
     }
 
     @Test
@@ -95,9 +95,9 @@ class MarsRoverTest {
 
         rover.executeCommand("L");
 
-        String Status = rover.getStatus();
+        String status = rover.getStatus();
 
-        assertEquals("0:0:S", Status);
+        assertEquals("0:0:S", status);
     }
 
     @Test
@@ -106,9 +106,9 @@ class MarsRoverTest {
 
         rover.executeCommand("M");
 
-        String Status = rover.getStatus();
+        String status = rover.getStatus();
 
-        assertEquals("0:1:N", Status);
+        assertEquals("0:1:N", status);
     }
 
     @Test
@@ -117,9 +117,9 @@ class MarsRoverTest {
 
         rover.executeCommand("M");
 
-        String Status = rover.getStatus();
+        String status = rover.getStatus();
 
-        assertEquals("1:0:E", Status);
+        assertEquals("1:0:E", status);
     }
 
     @Test
@@ -128,9 +128,9 @@ class MarsRoverTest {
 
         rover.executeCommand("M");
 
-        String Status = rover.getStatus();
+        String status = rover.getStatus();
 
-        assertEquals("0:-1:S", Status);
+        assertEquals("0:-1:S", status);
     }
 
     @Test
@@ -139,9 +139,9 @@ class MarsRoverTest {
 
         rover.executeCommand("M");
 
-        String Status = rover.getStatus();
+        String status = rover.getStatus();
 
-        assertEquals("-1:0:W", Status);
+        assertEquals("-1:0:W", status);
     }
 
     @Test
@@ -150,9 +150,9 @@ class MarsRoverTest {
 
         rover.executeCommand("B");
 
-        String Status = rover.getStatus();
+        String status = rover.getStatus();
 
-        assertEquals("0:-1:N", Status);
+        assertEquals("0:-1:N", status);
     }
 
     @Test
@@ -161,9 +161,9 @@ class MarsRoverTest {
 
         rover.executeCommand("B");
 
-        String Status = rover.getStatus();
+        String status = rover.getStatus();
 
-        assertEquals("-1:0:E", Status);
+        assertEquals("-1:0:E", status);
     }
 
     @Test
@@ -172,9 +172,9 @@ class MarsRoverTest {
 
         rover.executeCommand("B");
 
-        String Status = rover.getStatus();
+        String status = rover.getStatus();
 
-        assertEquals("0:1:S", Status);
+        assertEquals("0:1:S", status);
     }
 
     @Test
@@ -183,9 +183,9 @@ class MarsRoverTest {
 
         rover.executeCommand("B");
 
-        String Status = rover.getStatus();
+        String status = rover.getStatus();
 
-        assertEquals("1:0:W", Status);
+        assertEquals("1:0:W", status);
     }
 
     @Test
@@ -194,8 +194,8 @@ class MarsRoverTest {
 
         rover.executeCommand("MRBLM");
 
-        String Status = rover.getStatus();
+        String status = rover.getStatus();
 
-        assertEquals("-1:2:N", Status);
+        assertEquals("-1:2:N", status);
     }
 }
